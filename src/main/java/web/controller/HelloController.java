@@ -27,12 +27,4 @@ public class HelloController {
 		model.addAttribute("messages", messages);
 		return "index";
 	}
-
-	@GetMapping("/hello/cars")
-	public String getCars(@RequestParam(required = false, defaultValue = "5") int count, Model model) {
-		List<Car>cars = carService.getCars(count);
-		model.addAttribute("cars", cars);
-		return "cars";
-	}
-	
 }
